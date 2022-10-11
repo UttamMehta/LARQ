@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #bottom_u,
+    #main_u {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #bottom_u {
+        text-align: left;
+    }
+
+    #leftside_u {
+        padding-top: 100px;
+    }
+
+    #reviewinput_u>div {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    #reviewinput_u input {
+        width: 100px;
+        height: 30px;
+    }
+</style>
+
+<body>
+    <div id="main_u">
+        <div id="img_u">
+            <img src="https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225364/p1-ob-17-2-white-q/p1-ob-17-2-white-q.jpg"
+                alt="bottle" width="800px">
+        </div>
+        <div id="leftside_u">
+            <div>
+                <h2>LARQ Bottle PureVis™</h2>
+            </div>
+            <br>
+            <div>
+                <p>€109.00</p><br>
+            </div>
+            <div>
+                <p>2 reviews</p><br>
+            </div>
+            <div>
+                <p>colors</p><br>
+            </div>
+            <div> <button>Add to cart</button><br></div>
+            <br>
+            <hr>
+
+            <div>
+                <p>Product description <br></p>
+            </div>
+            <br>
+            <div>
+                <p>
+                    The LARQ Bottle PureVis™ is the world's first self-cleaning water bottle and water purification
+                    system.
+                    It uses PureVis technology to eliminate up to 99%* of bio-contaminants such as E. coli from your
+                    water
+                    and bottle.
+                </p>
+            </div>
+            <br>
+            <br>
+            <div>
+                <p> *Based on elimination 99.8% of E.coli in a 20-second cycle for all LARQ Bottles.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom_u">
+        <div>
+            <div>
+                <h4>Overall rating for</h4>
+                <h2>LARQ Bottle PureVis™</h2>
+            </div>
+
+            <div id="rating_u"></div>
+        </div>
+        <div id="reviewinput_u">
+            <div><input type="number" name="" id="input_u" placeholder="Rate out of 5">
+                <textarea name="" id="description_u" cols="30" rows="10" placeholder="Description"></textarea>
+            </div>
+
+            <!-- <textarea name="" id="desc_u" cols="30" rows="10"></textarea> -->
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+
+
+    document.querySelector("#reviewinput_u").addEventListener("keypress", (e) => {
+        let a = document.getElementById("input_u").value;
+        let b = document.getElementById("description_u").value;
+        // console.log("yes");
+        if (e.key === "Enter") {
+            reviewfun(a, b);
+            // console.log(a, b);
+        }
+    });
+
+    let arr = JSON.parse(localStorage.getItem("reviews")) || [];
+    function reviewfun(a, b) {
+        if (a > 0 && a < 6 && b !== "") {
+            let div = document.createElement("div");
+            let text = document.createElement("h3");
+            text.innerText = b;
+            let des = document.createElement("h4");
+            des.innerText = `${a}/5`;
+
+            div.append(des, text);
+            let obj = {
+                rate: a,
+                desc: b,
+            }
+            arr.push(obj);
+            localStorage.setItem("reviews", JSON.stringify(arr));
+
+            document.querySelector("#reviewinput_u").append(div);
+
+            averagerating();
+        }
+    }
+
+
+    function averagerating() {
+        let average = 0;
+        let arr1 = JSON.parse(localStorage.getItem("reviews"))
+        document.querySelector("#rating_u").innerHTML = " ";
+        arr1.forEach(element => {
+
+            average += +(element.rate);
+        });
+        average = average / arr1.length;
+        average = Math.round(average * 10) / 10;
+        // console.log(average + " " + arr1.length);
+        if (average < 1)
+            average = 1;
+        let h1 = document.createElement("h1");
+        h1.innerText = `${average}/5`;
+        document.querySelector("#rating_u").append(h1);
+    }
+
+
+
+
+    // let obj = [
+    //     {
+    //         id: 1,
+    //         Title: "LARQ Bottle Filtered",
+    //         Size: {
+    //             1: "500ml",
+    //             2: "700ml"
+    //         },
+    //         Price: {
+    //             1: 420,
+    //             2: 500,
+    //         },
+    //         Reviews: 000,
+
+    //         Colors: {
+    //             1: 0,
+    //             2: 0,
+    //             3: 0,
+    //         },
+    //         Url: {
+    //             img1: 0,
+    //             img2: 0,
+    //             img3: 0,
+    //         },
+
+    //         Desc: "A revolutionary portable water filtration system that combines high-performance Nano Zero filter technology with zerovalent iron providing a seamless, low-pressure drinking experience."
+
+    //     }
+    // ]
+
+</script>
