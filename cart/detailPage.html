@@ -39,6 +39,13 @@
         width: 100px;
         height: 30px;
     }
+
+    #rating_u {
+        margin-top: 0.66667rem;
+        font-size: 6.4rem;
+        line-height: 0.98;
+        color: #153a5b;
+    }
 </style>
 
 <body>
@@ -111,29 +118,35 @@
 <script>
 
 
+
+
     document.querySelector("#reviewinput_u").addEventListener("keypress", (e) => {
         let a = document.getElementById("input_u").value;
         let b = document.getElementById("description_u").value;
+        let d = new Date();
         // console.log("yes");
         if (e.key === "Enter") {
-            reviewfun(a, b);
+            reviewfun(a, b, d);
             // console.log(a, b);
         }
     });
 
     let arr = JSON.parse(localStorage.getItem("reviews")) || [];
-    function reviewfun(a, b) {
+    function reviewfun(a, b, d) {
         if (a > 0 && a < 6 && b !== "") {
             let div = document.createElement("div");
             let text = document.createElement("h3");
             text.innerText = b;
             let des = document.createElement("h4");
-            des.innerText = `${a}/5`;
+            des.innerText = `${a}`;
+            let d1 = document.createElement("h3");
+            d1.innerText = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}`
 
-            div.append(des, text);
+            div.append(des, d1, text);
             let obj = {
                 rate: a,
                 desc: b,
+                date: d,
             }
             arr.push(obj);
             localStorage.setItem("reviews", JSON.stringify(arr));
@@ -156,44 +169,18 @@
         average = average / arr1.length;
         average = Math.round(average * 10) / 10;
         // console.log(average + " " + arr1.length);
-        if (average < 1)
-            average = 1;
+        // if (average < 1)
+        //     average = 1;
         let h1 = document.createElement("h1");
-        h1.innerText = `${average}/5`;
+        h1.innerText = `Rating   : ${average}/5`;
         document.querySelector("#rating_u").append(h1);
     }
 
 
 
 
-    // let obj = [
-    //     {
-    //         id: 1,
-    //         Title: "LARQ Bottle Filtered",
-    //         Size: {
-    //             1: "500ml",
-    //             2: "700ml"
-    //         },
-    //         Price: {
-    //             1: 420,
-    //             2: 500,
-    //         },
-    //         Reviews: 000,
 
-    //         Colors: {
-    //             1: 0,
-    //             2: 0,
-    //             3: 0,
-    //         },
-    //         Url: {
-    //             img1: 0,
-    //             img2: 0,
-    //             img3: 0,
-    //         },
 
-    //         Desc: "A revolutionary portable water filtration system that combines high-performance Nano Zero filter technology with zerovalent iron providing a seamless, low-pressure drinking experience."
 
-    //     }
-    // ]
 
 </script>
