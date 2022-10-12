@@ -72,29 +72,46 @@ document.querySelector("#reviewinput_u").addEventListener("keypress", (e) => {
 });
 
 let arr = JSON.parse(localStorage.getItem("reviews")) || [];
+
+function showreview() {
+  if (arr.length !== 0) {
+    averagerating();
+    arr.forEach((el) => {
+      console.log(el);
+    });
+  }
+}
 function reviewfun(a, b, d) {
-  if (a > 0 && a < 6 && b !== "") {
+  event.preventDefault();
+  if (a > 0 && a < 6 && b !== " " && b !== "") {
     document.getElementById("input_u").value = " ";
-    document.getElementById("description_u").value = " ";
+    document.getElementById("description_u").value = "";
     let div = document.createElement("div");
     let text = document.createElement("h3");
     text.innerText = b;
     let des = document.createElement("h4");
     des.innerText = `${a}`;
     let d1 = document.createElement("h3");
-    d1.innerText = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}   ${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+    let d2 = d.getMinutes();
+    if (d2 < 10) d2 = `0${d2}`;
+    let d3 = d.getSeconds();
+    if (d3 < 10) d3 = `0${d3}`;
+
+    let d4 = d.getHours();
+    if (d4 < 12) d4 += "A.M";
+    else d4 += "P.M";
+
+    d1 = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}   ${d.getHours()}:${d2}:${d3}`;
 
     div.append(des, d1, text);
     let obj = {
       rate: a,
       desc: b,
-      date: d1,
+      da: d1,
     };
 
     arr.push(obj);
     localStorage.setItem("reviews", JSON.stringify(arr));
-
-    document.querySelector("#reviewinput_u").append(div);
 
     averagerating();
   }
@@ -116,7 +133,7 @@ function averagerating() {
   h1.innerText = `${average}/5`;
   document.querySelector("#rating_u").append(h1);
 }
-averagerating();
+
 document.getElementById("size1").addEventListener("click", fun);
 document.getElementById("size2").addEventListener("click", fun1);
 
