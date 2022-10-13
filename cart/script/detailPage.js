@@ -1,5 +1,6 @@
 const obj = {
   id: 1,
+  items: "bottle",
   title: "LARQ Pitcher PureVis™",
   disc: "The LARQ Pitcher uses a unique 2-step process to improve the quality of your water using PureVis™ and Nano Zero filter technology–giving you fresh-tasting water sip after sip.",
   disc1:
@@ -30,11 +31,14 @@ const obj = {
     "700ml": 750,
   },
 };
+let p;
+if (obj.items !== "bottle") p = obj.price;
+else obj.price[obj.size.first];
 
 let ob = {
   id: obj.id,
   size: obj.size.first,
-  price: obj.price[obj.size.first],
+  price: p,
   title: obj.title,
   color: "blue",
   nu: 1,
@@ -66,6 +70,10 @@ const show = (i) => {
 
   document.getElementById("desc1").innerHTML = `<p>${obj.disc}</p>`;
   document.getElementById("desc2").innerHTML = `<p>${obj.disc1}</p>`;
+  if (obj.items !== "bottle")
+    document.getElementById(
+      "allcolors"
+    ).innerHTML = `<h4>Filter Excessory</h4>`;
 };
 
 show(i1);
