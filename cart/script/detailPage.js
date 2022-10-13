@@ -30,6 +30,16 @@ const obj = {
     "700ml": 750,
   },
 };
+
+let ob = {
+  id: obj.id,
+  size: obj.size.first,
+  price: obj.price[obj.size.first],
+  title: obj.title,
+  color: "blue",
+  nu: 1,
+};
+let ar = JSON.parse(localStorage.getItem("cart")) || [];
 let i1 = obj.img.blue;
 const show = (i) => {
   let im = `<img src="${i[0]}" alt="bottle">`;
@@ -63,57 +73,110 @@ show(i1);
 document.querySelector("#reviewinput_u").addEventListener("keypress", (e) => {
   let a = document.getElementById("input_u").value;
   let b = document.getElementById("description_u").value;
+  let c = document.getElementById("reviewtitle_u").value;
   let d = new Date();
   // console.log("yes");
   if (e.key === "Enter") {
-    reviewfun(a, b, d);
+    reviewfun(a, b, c, d);
     // console.log(a, b);
   }
 });
 
-let arr = JSON.parse(localStorage.getItem("reviews")) || [];
+// let arr = obj.rating;
+let arr = [
+  {
+    rate: 5,
+    desc: "1k", // data will come from nagendra;
+    da: "2k",
+    title: "3k",
+  },
+];
 
-function showreview() {
-  if (arr.length !== 0) {
+showreview(arr);
+function showreview(arr1) {
+  if (arr1.length !== 0) {
+    document.querySelector(
+      ".rev"
+    ).innerHTML = `<p>${arr1.length} reviews</p><br>
+    <span class="material-symbols-outlined">stars
+    </span>`;
     averagerating();
-    arr.forEach((el) => {
+    document.querySelector("#reviewappend_u").innerHTML = "";
+    arr1.forEach((el) => {
       console.log(el);
+
+      let div = document.createElement("div");
+      div.id = "allreviews_u";
+
+      let div1 = document.createElement("div");
+      div1.id = "noofreview";
+
+      let rating = document.createElement("p");
+      rating.innerHTML = `<span class="material-symbols-outlined">stars
+      </span>`;
+      let z = document.createElement("h3");
+      z.innerText = el.rate;
+
+      // rating.id = "rating";
+      // // rating.innerText = el.rate;
+      let time = document.createElement("h3");
+      time.innerText = el.da;
+      div1.append(z, rating, time);
+      let ti = document.createElement("h1");
+      ti.innerText = el.title;
+
+      let dis = document.createElement("p");
+      dis.innerHTML = el.desc;
+
+      div.append(div1, ti, dis);
+
+      document.getElementById("reviewappend_u").append(div);
     });
   }
 }
-function reviewfun(a, b, d) {
+function reviewfun(a, b, c, d) {
   event.preventDefault();
-  if (a > 0 && a < 6 && b !== " " && b !== "") {
-    document.getElementById("input_u").value = " ";
+  if (a > 0 && a < 6 && b !== " " && b !== "" && c !== " " && c != "") {
+    document.getElementById("input_u").value = "";
     document.getElementById("description_u").value = "";
+    document.getElementById("reviewtitle_u").value = "";
     let div = document.createElement("div");
     let text = document.createElement("h3");
     text.innerText = b;
     let des = document.createElement("h4");
     des.innerText = `${a}`;
-    let d1 = document.createElement("h3");
+
     let d2 = d.getMinutes();
     if (d2 < 10) d2 = `0${d2}`;
     let d3 = d.getSeconds();
     if (d3 < 10) d3 = `0${d3}`;
+    let m;
 
     let d4 = d.getHours();
-    if (d4 < 12) d4 += "A.M";
-    else d4 += "P.M";
+    if (d4 < 12) m = " A.M";
+    else {
+      d4 = +(d4 % 12);
+      m = " P.M";
+    }
 
-    d1 = `${d.getDate()}/${d.getMonth()}/${d.getFullYear()}   ${d.getHours()}:${d2}:${d3}`;
-
+    let d1 = `${d.getDate()}/${+(
+      d.getMonth() + 1
+    )}/${d.getFullYear()}   ${d4}:${d2}:${d3}`;
+    d1 += m;
     div.append(des, d1, text);
     let obj = {
       rate: a,
       desc: b,
       da: d1,
+      title: c,
     };
 
     arr.push(obj);
-    localStorage.setItem("reviews", JSON.stringify(arr));
+    obj.rating = arr;
+    // localStorage.setItem("reviews", JSON.stringify(arr));
 
     averagerating();
+    showreview(arr);
   }
 }
 
@@ -138,26 +201,51 @@ document.getElementById("size1").addEventListener("click", fun);
 document.getElementById("size2").addEventListener("click", fun1);
 
 function fun() {
+  event.preventDefault();
   let a = document.getElementById("size1").innerText;
   console.log(a);
   const k = `<p>€${obj.price[a]}.00</p>`;
   console.log(k);
   document.getElementById("price").innerHTML = k;
+  ob.size = obj.size.first;
+  ob.price = obj.price[a];
 }
 
 function fun1() {
+  event.preventDefault();
   let a = document.getElementById("size2").innerText;
   console.log(a);
   const k = `<p>€${obj.price[a]}.00</p>`;
   console.log(k);
   document.getElementById("price").innerHTML = k;
+  ob.size = obj.size.second;
+  ob.price = obj.price[a];
 }
 
 function fun4() {
+  console.log(1);
   show(obj.img.white);
+  ob.color = "white";
   document.getElementById("colorname").innerText = "Granite White";
 }
 function fun3() {
   show(obj.img.blue);
+  ob.color = "blue";
   document.getElementById("colorname").innerText = "Monaco Blue";
+}
+
+function cart() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let flag = true;
+  if (cart.length > 0) {
+    for (let a of cart) {
+      if (a.size === ob.size && a.color === ob.color) {
+        a.nu = +a.nu + 1;
+        flag = false;
+      }
+    }
+  }
+  if (flag) cart.push(ob);
+  console.log(cart);
+  localStorage.setItem("cart", JSON.stringify(cart));
 }
