@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar{
+/* width: 95%; */
+margin: auto;
+display: flex;
+justify-content: space-between;
+padding: 5px;
+align-items: center;
+cursor: pointer;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+#item{
+display: flex;
+justify-content: space-between;
+
+}
+a {
+text-decoration: none;
+color: rgb(21, 58, 91);
+font-size: medium;
+font-weight:bold;
+cursor: pointer;
+}
+a:hover{
+    color:gray;
+}
+option{
+font-weight: bold;
+}
+#item > div{
+margin-right: 30px;
+
+}
+#nav > #logo{
+padding: 5px;
+}
+select {
+border:none;
+font-weight: bold;
+color: rgb(21, 58, 91);
+font-size: medium;
+text-decoration: none;
+margin-top: -5px;
+}
+#globe{
+color: rgb(21, 58, 91);
+margin-right: -7px;
+}
+.material-symbols-outlined{
+color:  rgb(21, 58, 91);
+}

@@ -7,7 +7,7 @@ const bottom=()=>{
             <li>My Accounts</li>
             <li>Exclusive Perks</li>
             <li>Corporate Gifting</li>
-            <li>Contact Us</li>
+            <li><a href="contact.html">Contact Us</a></li>
         </ul>
     </div>
     <div>
@@ -16,7 +16,6 @@ const bottom=()=>{
             <li>Gift Sets</li>
             <li> Travel Sleeve</li>
             <li>Accessories</li>
-           
         </ul>
     </div>
     <div>

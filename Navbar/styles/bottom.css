@@ -1,0 +1,39 @@
+
+        body{
+            background-color:rgb(21, 58, 91);
+            color: white;
+            cursor: pointer;
+        }
+        #head{
+            padding: 20px;
+            display: grid;
+            grid-template-columns:repeat(5,1fr) ;
+        }
+        li{
+            list-style: none;
+            margin-top: 20px;
+
+        }
+        ul{
+            font-weight: bold;
+        }
+        input {
+            margin-bottom: 20px;
+            padding: 8px;
+        }
+        select{
+            padding: 8px;
+        }
+        #last{
+            margin-top: 50px;
+        }
+        #lastDiv{
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            padding: 25px;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
