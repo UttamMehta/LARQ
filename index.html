@@ -7,195 +7,8 @@
     <title>Shop | LARQ</title>
     <link rel="icon" href="https://static.vecteezy.com/system/resources/thumbnails/004/700/960/small/al-letter-logo-triangle-concept-isolated-on-white-background-vector.jpg" type="image/icon type">
 </head>
-<style>
-    *{
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
-        overflow-y: auto !important;
-    }
-   #navbar{
-    height: 100px;
-    border: 1px solid red;
-    background-color: blue;
-    position: fixed;
-    top: 0;
-    width: 100%;
-   }
-    #body{
-        padding-top: 100px;
-    }
-   
-    #n_div1{
-        text-align: center;
-        display: flex;
-    }
-    #n_div1 img{
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
-        
-    }
-    #n_div1 h1{
-        font-size: 66px;
-        font-weight: 100;
-        color:#153a5b ;
-        letter-spacing: 1px;
-        margin-bottom: 40px;
-    }
-    #n_div1 p{
-       font-size: 14px;
-       margin-bottom: 40px;
-      
-    }
-    #n_div1_1{
-        background-color: rgb(245 249 252);
-        margin: auto;
-        
-    }
-    
-    #shopbutton{
-        margin: auto;
-        width: 100px;
-        height: 50px;
-        text-align: center;
-        background-color: #153a5b;
-        margin-top: 40px;
-    }
-    #shopbutton1{
-        margin: auto;
-        width: 100px;
-        height: 50px;
-        text-align: center;
-        background-color: #153a5b;
-        margin-top: 40px;
-    }
-    #shopbutton {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-top: 15px;
-        color: white;
-        
-    }
-    #shopbutton1 {
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-        margin-top: 15px;
-        color: white;
-        
-    }
-    #shopbutton:hover{
-               background-color: white;
-               color: #153a5b;
-               box-shadow: none;
-               border: 1px solid black;
-               transition: .5s linear;
-               border-radius: 15px;
-    }
-    #shopbutton1:hover{
-               background-color: white;
-               color: #153a5b;
-               box-shadow: none;
-               border: 1px solid black;
-               transition: .5s linear;
-               border-radius: 15px;
-    }
-    #shopbutton h3:hover{
-        color: #153a5b;
-    }
-    #n_div2{
-        display: flex;
-        justify-content:space-evenly; 
-        margin: auto;
-        margin:20px 30px;
-    }
-    #n_div2 div{
-        width: 20%;
-        height: 100%;
-       margin: 0px 60px;
-       gap: 40px;
-    }
-    #n_div2 img{
-        display: grid;
-        margin: auto;
-        width: 100px;
-    }
-    #n_div2 p{
-        margin-bottom: 20px;
-         }
-    #n_div3{
-            width: 100%;
-            height: 150px;
-            text-align: center;
-        }
-    #n_div3 h1{
-        font-size: 55px;
-        margin-bottom: 20px;
-        color: #153a5b;
-        font-family: inherit;
-    }
-    #n_div3 hr{
-        width: 100px;
-        height: 10px;
-        margin: auto;
-        background-color: red;
-    }
-    #n_div4{
-       display: flex;
-       justify-content: space-evenly;
-       text-align: center;
-       margin-bottom:100px;
-    }
-    #n_div4 img{
-        width: 400px;
-        cursor: pointer;
-    }
-    #n_div4 img:hover{
-        
-    }
-    #n_div4 h3{
-        font-size: 24px;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: #153a5b;
-    }
-    #n_div4 p{
-        color: #5c7b97;
-    }
-    #n_div5{
-        
-        position: relative;
-        width:max-content;
-        margin: auto;
-    }
-    #n_div5 img{
-        
-        width: 1000px;
-        
-        margin: auto;
-    }
-    #n_div5 h1{ 
-        width: 400px;
-        font-size: 64px;
-        position: absolute;
-        top: 200px;
-        right: -150px;
-        transform: translate(-50%, -50%);
-        color:#153a5b;
-    }
-    #n_div5 button{
-        width: 400px;
-        height: max-content;
-        font-size: 64px;
-        position: absolute;
-        top: 300px;
-        right: -150px;
-        transform: translate(-50%, -50%);
-       
-    }
-</style>
+<link rel="stylesheet" href="./index.css">
+  
 <body>
     <div id="navbar">
 
@@ -208,7 +21,7 @@
                         <h1>Cleaner water starts here</h1>
                     <p>Nano Zero filter technology is certified to remove lead, PFAS, chlorine & 70 other contaminants.</p>
                     </div>
-                    <button id="shopbutton" > Shop Now</button> 
+                    <button id="shopbutton" onclick="fun1()" > Shop Now</button> 
                 </div>
                 <div>
                     <img id="pitcher_img" src="./n_images/Pitcher.jpg" alt="">
@@ -246,49 +59,102 @@
           </div>
           <div id="n_div4">
             <div> 
-                <img src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1613059649/SKU/SPA/BDMB050A-1.jpg" alt="">
+                <img onclick="fun2()" src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1613059649/SKU/SPA/BDMB050A-1.jpg" alt="">
                 <p>LARQ Bottle PureVis™</p>
                 <h3>Monaco Blue</h3>
             </div>
             <div>
-                <img src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1635710578/SKU/SPA/BFDOB050A-1.jpg" alt="">
+                <img onclick="fun3()" src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1635710578/SKU/SPA/BFDOB050A-1.jpg" alt="">
                 <p>LARQ Bottle Filtered</p>
                 <h3>Obsidian Black</h3>
             </div>
             <div>
-                 <img src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1595497073/pitcher/Larq-White-01_lighton.jpg" alt="">
+                 <img onclick="fun4()" src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1595497073/pitcher/Larq-White-01_lighton.jpg" alt="">
                 <p>LARQ Pitcher PureVis™</p>
                 <h3>Pure White</h3>
                 </div>
           </div>
           <div id="n_div5">
             <img src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1652817680/assets/spa/v2/content/product/text-media/larq_bottle_purevis_lifestyle_d_v2.jpg" alt="">
-            <div id="div5_1">
+            <div id="n_div5_1">
                 <h1>LARQ Bottle PureVis™</h1>
-                <button id="shopbutton1">Shop</button>
+                <p>Brilliantly clean water from a self-cleaning bottle.</p>
+                <button onclick="fun5()" id="shopbutton1">Shop</button>
             </div>
           </div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div id="n_div6">
+            <div class="n_div6_1">
+                <img src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1595497073/pitcher/Larq-White-01_lighton.jpg" alt="">
+                <div id="n_div6_1_1">
+                <h1>LARQ Bottle PureVis™</h1>
+                <p>Brilliantly clean water from a self-cleaning bottle.</p>
+                <a onclick="fun6()">shop now</a>
+                </div>
+                
+            </div>
+            <div class="n_div6_1">
+                <img src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1635710578/SKU/SPA/BFDOB050A-1.jpg" alt="">
+                <DIV Id="n_div6_1_1">
+                <h1>LARQ Bottle Filtered</h1>
+                <p>Take hydration into your own hands..</p>
+                <a onclick="fun7()">shop now</a>
+                </DIV>  
+            </div>
+          </div>
+          <div id="n_div3" >
+            <h1>A smart <br> way to sip</h1>
+            <hr>
+
+          </div>
+          <div id="n_div7">
+            <div id="n_div7_1">
+               <h3>LARQ Bottle PureVis</h3>
+               <h5>Brilliantly clean water</h5>
+               <p>Neutralizes up to 99%* of bacteria such as E.coli using PureVis technology. </p>
+               <a href="">Learn more.</a>
+               <h5>Self-cleaning & worry-free</h5>
+               <p>Intelligently activates every 2 hours to keep your water and bottle stink-free.</p>
+               <button onclick="fun8()" id="shopbutton1">Shop now</button>
+            </div>
+            <div id="n_div7_2">
+              <video autoplay playsinline loop src="https://res.cloudinary.com/larq/video/upload/q_auto/v1618589062/assets/video/LARQ_Website_Homepage_Particle-Animation_580x580px.mp4"></video>
+            </div>
+          </div>
+          <div id="n_div8">
+              <div id="n_div8_2">
+                <video autoplay playsinline loop src="https://res.cloudinary.com/larq/video/upload/q_auto/v1618422114/assets/spa/v2/content/product/pitcher/LARQ-Pitcher_Step-1.mp4"></video>
+              </div>
+            <div id="n_div8_1">
+               <h3>LARQ Pitcher PureVis</h3>
+               <h5>Nano Zero filter technology</h5>
+               <p>Our innovative plant-based filters are independently tested to the highest standards to be effective against pollutants like lead*, chlorine, mercury, VOCs, cadmium, PFAS / PFOA*, pharmaceuticals*, particulates, and more.</p>
+               <a href="">Learn more.</a>
+               <h5>PureVis technology</h5>
+               <p>roprietary PureVis™ technology improves the quality of your water by preventing bio-contaminant* growth. Learn more.
+                *In lab testing, PureVis prevents and deactivates naturally occurring heterotrophic bacteria that may cause odor and impact the taste of water compared to non-UV treated water pitchers.</p>
+               <button onclick="fun9()" id="shopbutton1">Shop now</button>
+            </div>
+          </div>
+          <div id="n_div9">
+            <div id="n_div9_1">
+                <img src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1565443332/assets/spa/pollution/right.png" alt="">
+                <img src="https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1584008098/assets/spa/pollution/left_alt.png" alt="">
+            </div>
+            <div id="n_div9_2">
+                <h1>One million single use plastic bottles are thrown out every minute!
+                </h1>
+            </div>
+          </div>
+          <div id="n_div10">
+            <div id="n_div10_1">
+                "Say goodbye to your reusable bottles persistent funk — and hello to this Jetsons-worthy update.
+           <p>OPRAH MAGAZINE</p>
+            </div> 
+          </div>
     </div>
     <div id="bottom">
-
+       <p>"Say goodbye to your reusable bottles persistent funk — and hello to this Jetsons-worthy update.</p>
     </div>
 </body>
 </html>
-<script>
-       
-</script>
-
-
-
-
-
+<script src="./index.js"></script>
