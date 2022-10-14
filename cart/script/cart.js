@@ -1,10 +1,10 @@
 let arr = JSON.parse(localStorage.getItem("cart")) || [];
-
+let wish = JSON.parse(localStorage.getItem("wish")) || [];
 function cart() {
   document.getElementById("main").innerHTML = "";
   arr.forEach((el, i) => {
     let s;
-    if (el.size == "") s = "Excessior";
+    if (el.size === "" || s === 0 || s === " ") s = "Excessior";
     let div1 = document.createElement("div");
     div1.id = "img";
     let img = document.createElement("img");
@@ -26,6 +26,8 @@ function cart() {
     bs.innerText = "sub";
     bs.addEventListener("click", () => {
       if (+el.nu > 1) el.nu = +el.nu - 1;
+      arr[i].nu = el.nu;
+      localStorage.setItem("cart", JSON.stringify(arr));
       cart(arr);
     });
 
@@ -33,6 +35,23 @@ function cart() {
     inp.value = el.nu;
     inp.placeholder = "Quantity";
     inp.type = "number";
+    let z;
+    inp.addEventListener("input", () => {
+      if (z) clearTimeout(z);
+      z = setTimeout(() => {
+        let k = document.querySelectorAll("input");
+        let k1;
+        k.forEach((el, j) => {
+          if (i == j) k1 = el;
+        });
+        console.log(k1.value);
+
+        el.nu = +k1.value;
+        arr[i].nu = el.nu;
+        localStorage.setItem("cart", JSON.stringify(arr));
+        cart(arr);
+      }, 500);
+    });
 
     let ba = document.createElement("button");
     ba.innerText = "add";
@@ -45,9 +64,6 @@ function cart() {
 
     div3.append(bs, inp, ba);
 
-    // let div7 = document.createElement("div");
-    // div7.append(h3, p, div3);
-
     div2.append(h3, p, div3);
 
     let div4 = document.createElement("div");
@@ -58,6 +74,16 @@ function cart() {
       arr.splice(i, 1);
       cart(arr);
     });
+    let bw = document.createElement("button");
+    bw.innerText = "wish";
+    bw.addEventListener("click", () => {
+      let m = arr.splice(i, 1);
+      localStorage.setItem("cart", JSON.stringify(arr));
+      cart(arr);
+      wish.push(m);
+      localStorage.setItem("wish", JSON.stringify(wish));
+      wish(wish);
+    });
 
     let h4 = document.createElement("h4");
     h4.innerText = el.price * el.nu;
@@ -66,7 +92,11 @@ function cart() {
     div5.append(bd);
     let div6 = document.createElement("div");
     div6.append(h4);
-    div4.append(div5, div6);
+
+    let div7 = document.createElement("div");
+    div7.append(bw);
+
+    div4.append(div5, div7, div6);
 
     let div = document.createElement("div");
     div.append(div1, div2, div4);
