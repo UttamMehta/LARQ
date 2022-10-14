@@ -7,6 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart page</title>
     <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0px;
+        }
+
         #main>div {
             width: 50%;
             display: grid;
@@ -53,12 +59,24 @@
             margin-left: -5px;
             margin-right: -5px;
         }
+
+        #flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #totalprice {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
     </style>
 </head>
 
 <body>
     <h1>Your Cart</h1>
-    <div>
+    <div id="flex">
 
         <div id="main">
             <!-- <div id="img">
@@ -85,7 +103,7 @@
  -->
 
         </div>
-        <div id="wishlist">
+        <div id="totalprice">
 
         </div>
     </div>

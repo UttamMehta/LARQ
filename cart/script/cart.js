@@ -1,6 +1,6 @@
 let arr = JSON.parse(localStorage.getItem("cart")) || [];
-let wish = JSON.parse(localStorage.getItem("wish")) || [];
-function cart() {
+// let wise = JSON.parse(localStorage.getItem("wises")) || [];
+function cart(arr) {
   document.getElementById("main").innerHTML = "";
   arr.forEach((el, i) => {
     let s;
@@ -73,36 +73,42 @@ function cart() {
     bd.addEventListener("click", () => {
       arr.splice(i, 1);
       cart(arr);
-    });
-    let bw = document.createElement("button");
-    bw.innerText = "wish";
-    bw.addEventListener("click", () => {
-      let m = arr.splice(i, 1);
       localStorage.setItem("cart", JSON.stringify(arr));
-      cart(arr);
-      wish.push(m);
-      localStorage.setItem("wish", JSON.stringify(wish));
-      wish(wish);
     });
+    // let bw = document.createElement("button");
+    // bw.innerText = "wish";
+    // bw.addEventListener("click", () => {
+    //   let m = el;
+    //   arr.splice(i, 1);
+    //   localStorage.setItem("cart", JSON.stringify(arr));
+    //   cart(arr);
+    //   wise.push(el);
+    //   localStorage.setItem("wish", JSON.stringify(wise));
+    //   wish(wise);
+    // });
+    //done for wishlist part
 
     let h4 = document.createElement("h4");
     h4.innerText = el.price * el.nu;
+    h4.id = "price";
 
     let div5 = document.createElement("div");
     div5.append(bd);
     let div6 = document.createElement("div");
     div6.append(h4);
 
-    let div7 = document.createElement("div");
-    div7.append(bw);
+    // let div7 = document.createElement("div");
+    // div7.append(bw);
+    //done for wishlist
 
-    div4.append(div5, div7, div6);
+    div4.append(div5, div6);
 
     let div = document.createElement("div");
     div.append(div1, div2, div4);
 
     document.getElementById("main").append(div);
   });
+  Total();
 }
 cart(arr);
 
@@ -110,4 +116,34 @@ function add(j) {
   arr.splice(j, 1);
   localStorage.setItem("cart", JSON.stringify(arr));
   cart(arr);
+}
+
+// function wish(wise) {
+//   wise.forEach((el, i) => {       // done for wishlist
+// console.log(el);
+//   });
+// }
+// wish(wise);
+
+function Total() {
+  let div7 = document.createElement("div");
+  let h5 = document.createElement("h5");
+  h5.innerHTML = "Sub Total";
+
+  let h = document.createElement("h4");
+  let price = document.querySelectorAll("#price");
+  let p = 0;
+
+  for (let b of price) p = +b.innerText + p;
+  console.log(p);
+
+  let m = ` <div>
+  <h4>Sub Total</h4>
+</div>
+<div>
+  <p>${p}</p>
+</div>
+`;
+
+  document.getElementById("totalprice").innerHTML = m;
 }
