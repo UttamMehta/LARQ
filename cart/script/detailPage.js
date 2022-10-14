@@ -31,16 +31,22 @@ const obj = {
     "700ml": 750,
   },
 };
-let p;
-if (obj.items !== "bottle") p = obj.price;
-else obj.price[obj.size.first];
+let p, s;
+if (obj.items !== "bottle") {
+  p = obj.price;
+  s = 0;
+} else {
+  p = obj.price[obj.size.first];
+  s = obj.size.first;
+}
 
 let ob = {
   id: obj.id,
-  size: obj.size.first,
+  size: s,
   price: p,
   title: obj.title,
   color: "blue",
+  img: obj.img.blue[0],
   nu: 1,
 };
 let ar = JSON.parse(localStorage.getItem("cart")) || [];
