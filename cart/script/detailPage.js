@@ -34,7 +34,7 @@ const obj = {
 let p, s;
 if (obj.items !== "bottle") {
   p = obj.price;
-  s = 0;
+  s = "";
 } else {
   p = obj.price[obj.size.first];
   s = obj.size.first;
@@ -238,6 +238,7 @@ function fun1() {
 
 function fun4() {
   console.log(1);
+  ob.img = obj.img.white[0];
   show(obj.img.white);
   ob.color = "white";
   document.getElementById("colorname").innerText = "Granite White";
@@ -245,6 +246,7 @@ function fun4() {
 function fun3() {
   show(obj.img.blue);
   ob.color = "blue";
+  ob.img = obj.img.blue[0];
   document.getElementById("colorname").innerText = "Monaco Blue";
 }
 
@@ -262,4 +264,5 @@ function cart() {
   if (flag) cart.push(ob);
   console.log(cart);
   localStorage.setItem("cart", JSON.stringify(cart));
+  console.log(uttam);
 }
