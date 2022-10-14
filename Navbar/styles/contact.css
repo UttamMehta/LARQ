@@ -1,0 +1,131 @@
+ /* navbar 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#navbar{
+/* width: 95%; 
+margin: auto;
+display: flex;
+justify-content: space-between;
+padding: 5px;
+align-items: center;
+box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+#item{
+display: flex;
+justify-content: space-between;
+}
+a {
+text-decoration: none;
+color: rgb(21, 58, 91);
+font-size: medium;
+font-weight:bold;
+cursor: pointer;
+}
+option{
+font-weight: bold;
+}
+#item > div{
+margin-right: 30px;
+}
+#nav > #logo{
+padding: 5px;
+}
+select {
+border:none;
+font-weight: bold;
+color: rgb(21, 58, 91);
+font-size: medium;
+text-decoration: none;
+margin-top: -5px;
+}
+#globe{
+color: rgb(21, 58, 91);
+margin-right: -7px;
+}
+.material-symbols-outlined{
+color:  rgb(21, 58, 91);
+}  */
+/* bottom */
+/* body{
+    background-color:rgb(21, 58, 91);
+    color: white;
+    cursor: pointer;
+}
+#head{
+    padding: 20px;
+    display: grid;
+    grid-template-columns:repeat(5,1fr) ;
+}
+li{
+    list-style: none;
+    margin-top: 20px;
+
+}
+ul{
+    font-weight: bold;
+}
+input {
+    margin-bottom: 20px;
+    padding: 8px;
+}
+select{
+    padding: 8px;
+}
+#last{
+    margin-top: 50px;
+}
+#lastDiv{
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+} */
+
+/* contactpage */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 40px;
+}
+h1 {
+    color: rgb(21, 58, 91);
+    font-weight: 600;
+    font-size: 60px; 
+    margin-bottom: 20px;
+}
+#content > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    padding: 10px;
+}
+#content > p{
+    line-break:normal;
+}
+a{
+  color: rgb(21, 58, 91);  
+  text-decoration: none;
+  font-weight: 600;
+  margin-bottom: 10px; 
+  font-size: 25px; 
+}
+h4{
+    font-weight: 600;
+    color:rgb(21, 58, 91) ;
+    margin-bottom: 20px;
+    font-size: 25px;
+}
+div > p{
+    margin-bottom: 20px;
+}
