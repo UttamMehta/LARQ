@@ -23,7 +23,11 @@ function cart(arr) {
     p.innerText = "Filter  : " + el.size;
 
     let bs = document.createElement("button");
-    bs.innerText = "sub";
+    // bs.innerText = "sub";
+    bs.innerHTML = `<span class="material-symbols-outlined">
+    remove
+    </span>`;
+    bs.id = "sub";
     bs.addEventListener("click", () => {
       if (+el.nu > 1) el.nu = +el.nu - 1;
       arr[i].nu = el.nu;
@@ -54,7 +58,11 @@ function cart(arr) {
     });
 
     let ba = document.createElement("button");
-    ba.innerText = "add";
+    // ba.innerText = "add";
+    ba.innerHTML = `<span class="material-symbols-outlined">
+    add
+    </span>`;
+    ba.id = "add";
     ba.addEventListener("click", () => {
       el.nu = +el.nu + 1;
       arr[i].nu = el.nu;
@@ -69,7 +77,11 @@ function cart(arr) {
     let div4 = document.createElement("div");
     div4.id = "deleteandprice";
     let bd = document.createElement("button");
-    bd.innerText = "delete";
+    // bd.innerText = "delete";
+    bd.innerHTML = `<span class="material-symbols-outlined">
+    delete
+    </span>`;
+    bd.id = "del";
     bd.addEventListener("click", () => {
       arr.splice(i, 1);
       cart(arr);

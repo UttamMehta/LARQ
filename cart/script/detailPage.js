@@ -1,4 +1,4 @@
-const obj = {
+let obj = {
   id: 1,
   items: "bottle",
   title: "LARQ Pitcher PureVis™",
@@ -31,6 +31,11 @@ const obj = {
     "700ml": 750,
   },
 };
+
+localStorage.setItem("abc", JSON.stringify(obj));
+
+obj = JSON.parse(localStorage.getItem("abc"));
+
 let p, s;
 if (obj.items !== "bottle") {
   p = obj.price;
@@ -97,14 +102,7 @@ document.querySelector("#reviewinput_u").addEventListener("keypress", (e) => {
 });
 
 // let arr = obj.rating;
-let arr = [
-  {
-    rate: 5,
-    desc: "1k", // data will come from nagendra;
-    da: "2k",
-    title: "3k",
-  },
-];
+let arr = JSON.parse(localStorage.getItem("reviews")) || [];
 
 showreview(arr);
 function showreview(arr1) {
@@ -184,7 +182,6 @@ function reviewfun(a, b, c, d) {
       da: d1,
       title: c,
     };
-
     arr.push(obj);
     obj.rating = arr;
     // localStorage.setItem("reviews", JSON.stringify(arr));
@@ -238,19 +235,23 @@ function fun1() {
 
 function fun4() {
   console.log(1);
+  event.preventDefault();
   ob.img = obj.img.white[0];
   show(obj.img.white);
   ob.color = "white";
   document.getElementById("colorname").innerText = "Granite White";
 }
 function fun3() {
+  event.preventDefault();
   show(obj.img.blue);
   ob.color = "blue";
   ob.img = obj.img.blue[0];
+
   document.getElementById("colorname").innerText = "Monaco Blue";
 }
 
 function cart() {
+  event.preventDefault();
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let flag = true;
   if (cart.length > 0) {
@@ -264,5 +265,9 @@ function cart() {
   if (flag) cart.push(ob);
   console.log(cart);
   localStorage.setItem("cart", JSON.stringify(cart));
-  console.log(uttam);
+  console.log("uttam");
 }
+
+document.querySelector(".blue").addEventListener("click", fun3);
+document.querySelector(".white").addEventListener("click", fun4);
+document.querySelector(".cart").addEventListener("click", cart);
