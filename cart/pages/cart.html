@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart page</title>
+    <style>
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0px;
+        }
+
+        #main>div {
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+
+        }
+
+        #img>img {
+            width: 100%;
+        }
+
+        #button {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        input {
+            width: 60px;
+            text-align: center;
+        }
+
+        #addremove>h3 {
+            margin: 0px;
+        }
+
+        #deleteandprice {
+            display: flex;
+            height: 90%;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        #addremove {
+            display: flex;
+            flex-direction: column;
+            height: 80%;
+            justify-content: space-between;
+
+        }
+
+        button {
+            background-color: #fff;
+            border: .5px solid grey;
+            margin-left: -5px;
+            margin-right: -5px;
+        }
+
+        button>span {
+            cursor: pointer;
+        }
+
+        #flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #totalprice {
+            width: 40%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        #del {
+            border: none;
+        }
+
+        #sub {
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        #add {
+            border-radius: 0px 10px 10px 0px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Your Cart</h1>
+    <div id="flex">
+
+        <div id="main">
+            <!-- <div id="img">
+            <img src="https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383113/LARQ_Pitcher_MB_1/LARQ_Pitcher_MB_1.jpg"
+                alt="bootle image">
+        </div>
+        <div id="addremove">
+            <h3>Title</h3>
+            <p>Filter : 700ml</p>
+            <div id="button">
+                <button onclick="sub()">sub</button>
+                <input type="number" placeholder="noofpurchases" id="input">
+                <button onclick="add()">add</button>
+
+            </div>
+        </div>
+
+        <div id="deleteandprice">
+            <div><button>delete</button></div>
+            <div>
+                <h4>120</h4>
+            </div>
+        </div>
+ -->
+
+        </div>
+        <div id="totalprice">
+
+        </div>
+    </div>
+</body>
+<link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+</html>
+<script src="../script/cart.js" type="module"></script>
