@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <style>
+        #flex_u {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            flex-direction: row;
+            gap: 30px;
+        }
+
+        #img_u {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        img {
+            width: 100%;
+
+        }
+
+        #interval img {
+            width: 50%;
+            margin-top: 10px;
+        }
+
+        #interval>div>div>img {
+            height: 140px;
+        }
+
+        input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0px;
+        }
+
+        button {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        button,
+        form>input {
+            margin-top: 12px;
+            width: 98%;
+            height: 32px;
+
+        }
+
+        * {
+            font-size: medium;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+
+        button {
+            align-items: center;
+            font-weight: bold;
+            width: 100%;
+            border-radius: 8px;
+            background-color: #e7e7e7;
+            cursor: pointer;
+        }
+
+        body>img {
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div id="flex_u">
+
+        <div id="img_u">
+            <img src="https://www.bellanaija.com/wp-content/uploads/2015/08/World-Bank-logo.jpg" alt="World-Bank-logo">
+            <img src="https://1.bp.blogspot.com/-PIHlQoDf33M/XRhoGQU1SHI/AAAAAAAAARQ/_Qc_aA4Sxa8-YYaYThenUrSe5CTl5NjRACLcBGAs/s1600/Public%2Bor%2BPrivate%2BSector%2BKe%2BAll%2BIndian%2BBanks%2BName%2BKi%2BList.png"
+                alt="bankimage3">
+            <img src="https://i2.wp.com/innovation-village.com/wp-content/uploads/2020/01/photos-of-Nigerian-Banks.jpg?fit=1024%2C610&ssl=1"
+                alt="bankimage1">
+            <img src="https://th.bing.com/th/id/OIP.KUB7vl5HrU-yxi626hP5ugHaDb?pid=ImgDet&rs=1" alt="bankimage2">
+        </div>
+        <div>
+            <form action="">
+                <h2>Card details</h2>
+                <h3 id="amount"></h3>
+                <input type="text" name="" id="name" placeholder="Enter Your Name"><br>
+                <input type="number" name="" id="" placeholder="Enter Card Number"><br>
+                <input type="text" name="" id="" placeholder="Expiration date (MM/YYYY)">
+                <input type="password" name="" id="" placeholder="CVC/CVV">
+                <input type="password" placeholder="Enter your pin"><br>
+                <button>Submit</button>
+            </form>
+        </div>
+        <div id="interval">
+            <img src="https://cdn.kalingatv.com/wp-content/uploads/2020/07/upi-payment.jpg" alt="upi">
+            <div id="">
+                <div id="phonepay"><img
+                        src="https://i0.wp.com/www.plansinfo.com/blog/wp-content/uploads/2018/01/phonepe-e1520537823958.png?fit=200%2C200&ssl=1"
+                        alt="upi1st"></div>
+                <div id="paytm"> <img
+                        src="https://th.bing.com/th/id/R.7891803c3389e055c54dd7441adec0e9?rik=r66Adr4%2bYa0rYw&riu=http%3a%2f%2ffeedmystartup.com%2fwp-content%2fuploads%2f2018%2f04%2fPaytm_logo-300x164.png&ehk=ApQRtA7cklIcGWtW4sUuujcj6ywaWWxA7%2bgAUl6e%2buU%3d&risl=&pid=ImgRaw&r=0"
+                        alt="upi2nd"></div>
+                <div id="amazon"> <img
+                        src="https://www.bing.com/th?id=OIP.ciELcTgvSog9sUAKVrDlIQHaE8&w=306&h=204&c=8&rs=1&qlt=90&o=6&pid=3.1&rm=2"
+                        alt="upi3rd"></div>
+                <div id="gpay">
+                    <img src="https://th.bing.com/th/id/OIP.t0r0NAChbqY1pM-nbBq3AwHaHZ?pid=ImgDet&rs=1" alt="upi4th">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="../script/checkout.js" type="module"></script>
