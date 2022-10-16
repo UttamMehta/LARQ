@@ -1,6 +1,6 @@
 let obj = {
   id: 1,
-  items: "bottle",
+  items: "bottles",
   title: "LARQ Pitcher PureVis™",
   disc: "The LARQ Pitcher uses a unique 2-step process to improve the quality of your water using PureVis™ and Nano Zero filter technology–giving you fresh-tasting water sip after sip.",
   disc1:
@@ -26,15 +26,12 @@ let obj = {
     first: "500ml",
     second: "700ml",
   },
-  price: {
-    "500ml": 500,
-    "700ml": 750,
-  },
+  price: 500,
 };
 
-localStorage.setItem("abc", JSON.stringify(obj));
+// localStorage.setItem("abc", JSON.stringify(obj));
 
-obj = JSON.parse(localStorage.getItem("abc"));
+// obj = JSON.parse(localStorage.getItem("abc"));
 
 let p, s;
 if (obj.items !== "bottle") {
@@ -63,11 +60,17 @@ const show = (i) => {
   const j = `<h2>${obj.title}</h2>`;
   document.getElementById("title").innerHTML = j;
 
-  document.getElementById("size1").innerText = obj.size.first;
-  document.getElementById("size2").innerText = obj.size.second;
+  if (obj.items === "bottle") {
+    document.getElementById("size1").innerText = obj.size.first;
+    document.getElementById("size2").innerText = obj.size.second;
+  }
 
-  let value = obj.size.first;
-  const k = `<p>€${obj.price[value]}.00</p>`;
+  if (obj.items !== "bottle") {
+    document.getElementById("size1").setAttribute("class", "hide");
+    document.getElementById("size2").setAttribute("class", "hide");
+  }
+  // let value = obj.size.first;
+  const k = `<p>€${p}.00</p>`;
   document.getElementById("price").innerHTML = k;
 
   let z = `<img src=${i[1]}
