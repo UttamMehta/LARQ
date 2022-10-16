@@ -149,7 +149,7 @@ function Total() {
 
   for (let b of price) p = +b.innerText + p;
   console.log(p);
-
+  localStorage.setItem("netamount", JSON.stringify(p));
   let m = ` <div>
   <h4>Sub Total</h4>
 </div>
@@ -177,7 +177,7 @@ document.querySelector("#coupan").addEventListener("click", () => {
     // document.getElementById("prices").innerText = m;
 
     document.getElementById("applycoupan").innerHTML = "";
-
+    localStorage.setItem("netamount", JSON.stringify(n));
     document.getElementById("totalprice").innerHTML = ` <div>
     <h4>Sub Total</h4>
 </div>
@@ -202,6 +202,7 @@ document.querySelector("#coupan").addEventListener("click", () => {
 <div>
     <p>${n}</p>
 </div>
+<a href="./checkout.html"><button id="checkout"> Checkout</button></a>
 `;
   });
 });
