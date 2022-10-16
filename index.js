@@ -1,38 +1,38 @@
 function fun1(){
     localStorage.setItem("data", JSON.stringify(obj[0]))
-location.href=""
+location.href="./cart/pages/detailPage.html";
 }
 function fun2(){
     localStorage.setItem("data", JSON.stringify(obj[1]))
-   location.href="" 
+   location.href= "./cart/pages/detailPage.html";
 }
 function fun3(){
     localStorage.setItem("data", JSON.stringify(obj[2]))
-    location.href=""
+    location.href="./cart/pages/detailPage.html";
 }
 function fun4(){
     localStorage.setItem("data", JSON.stringify(obj[0]))
-    location.href=""
+    location.href="./cart/pages/detailPage.html";
 }
 function fun5(){
     localStorage.setItem("data", JSON.stringify(obj[1]))
-    location.href=""
+    location.href="./cart/pages/detailPage.html";
 }
 function fun6(){
     localStorage.setItem("data", JSON.stringify(obj[0]))
-    location.href=""
+    location.href="./cart/pages/detailPage.html"
 }
 function fun7(){
-    localStorage.setItem("data", JSON.stringify(obj[3]))
-    location.href=""
+    localStorage.setItem("data", JSON.stringify(obj[2]))
+    location.href="./cart/pages/detailPage.html"
 }
 function fun8(){
     localStorage.setItem("data", JSON.stringify(obj[1]))
-    location.href=""
+    location.href="./cart/pages/detailPage.html"
 }
 function fun9(){
     localStorage.setItem("data", JSON.stringify(obj[0]))
-    location.href=""
+    location.href="./cart/pages/detailPage.html"
 }
     var obj=[
         { 
@@ -102,8 +102,7 @@ function fun9(){
         disc:"We’ve got your on-the-go lifestyle covered. This fuss-free neoprene sleeve features an easy-carry leather strap making travel–and everything in-between–a breeze. The Travel Sleeve fits snugly on your LARQ Bottle or LARQ Bottle Movement.",
         disc1:"Medium size compatible with:LARQ Bottle 17oz/500ml and LARQ Bottle Movement 24oz/710ml",
         img:{
-            blue:null,
-            white:["https://cdn11.bigcommerce.com/s-b0j8iiyjpx/products/113/images/446/LARQ-Sleeve_Product-1_With-Granite-White__30185.1662048506.1280.1280.jpg?c=2","https://cdn11.bigcommerce.com/s-b0j8iiyjpx/products/113/images/476/sleeve_front_view__57923.1662048506.1280.1280.jpg?c=2","https://cdn11.bigcommerce.com/s-b0j8iiyjpx/products/113/images/475/sleeve_side_view__11441.1662048506.1280.1280.jpg?c=2","https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_1080,h_1080,c_fill/v1617396498/assets/spa/v2/content/product/lifestyle/sleeve/instagram/sleeve_2.jpg","https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_1080,h_1080,c_fill/v1617396498/assets/spa/v2/content/product/lifestyle/sleeve/instagram/sleeve_1.jpg"]
+            blue:["https://cdn11.bigcommerce.com/s-b0j8iiyjpx/products/113/images/446/LARQ-Sleeve_Product-1_With-Granite-White__30185.1662048506.1280.1280.jpg?c=2","https://cdn11.bigcommerce.com/s-b0j8iiyjpx/products/113/images/476/sleeve_front_view__57923.1662048506.1280.1280.jpg?c=2","https://cdn11.bigcommerce.com/s-b0j8iiyjpx/products/113/images/475/sleeve_side_view__11441.1662048506.1280.1280.jpg?c=2","https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_1080,h_1080,c_fill/v1617396498/assets/spa/v2/content/product/lifestyle/sleeve/instagram/sleeve_2.jpg","https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_1080,h_1080,c_fill/v1617396498/assets/spa/v2/content/product/lifestyle/sleeve/instagram/sleeve_1.jpg"]
           },
         rating:[],
         
@@ -117,8 +116,8 @@ function fun9(){
         disc:"Charging cables are always mysteriously going missing, aren't they?Don't sweat it. This replacement micro USB charging cable for your LARQ Bottle will get your water purification back on schedule.",
         disc1:"",
         img:{
-            blue:null,
-            white:["https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1617405051/LARQ-USB-Cable-min__70547.1612041206.1280-1/LARQ-USB-Cable-min__70547.1612041206.1280-1.jpg","https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1617405055/LARQ-USB-Cable-Packaging-min__53845.1612041206.1280-1/LARQ-USB-Cable-Packaging-min__53845.1612041206.1280-1.jpg"]
+           
+            blue:["https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1617405051/LARQ-USB-Cable-min__70547.1612041206.1280-1/LARQ-USB-Cable-min__70547.1612041206.1280-1.jpg","https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1617405055/LARQ-USB-Cable-Packaging-min__53845.1612041206.1280-1/LARQ-USB-Cable-Packaging-min__53845.1612041206.1280-1.jpg"]
           },
         rating:[],
         price:8,
@@ -132,7 +131,7 @@ function fun9(){
         disc1:"",
         img:{
             blue:["https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1629224135/LARQ_Pitcher_Filter_Advanced/LARQ_Pitcher_Filter_Advanced.jpg"],
-            white:null
+            
           },
         rating:[],
         price:26, 
@@ -144,8 +143,8 @@ function fun9(){
         disc:"Our carbon-derived, plant-based filter gets rid of unwanted contaminants like lead, mercury, chlorine, VOCs, and more, leaving you with pure, crisp-tasting water. No compromises here.",
         disc1:"",
         img:{
-            white:["https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1629224141/LARQ_Pitcher_Filter_Essential/LARQ_Pitcher_Filter_Essential.jpg"],
-            blue:null
+            blue:["https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1629224141/LARQ_Pitcher_Filter_Essential/LARQ_Pitcher_Filter_Essential.jpg"],
+            
           },
         rating:[],
         price:26,
@@ -158,7 +157,7 @@ function fun9(){
         disc:"A revolutionary portable water filtration system that combines a high-performance Nano Zero filter with a seamless, low-pressure drinking experience. The Nano Zero filter technology improves taste for a smooth finish and removes lead, chlorine, PFAS, and particulates that meet NSF/ANSI 42, 53 & 401 standards.",
         disc1:"",
         img:{
-            white:["https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/w_2560,h_2560/v1655284385/401223116-larq-bottle-filtered_cap-filter_ob_01/401223116-larq-bottle-filtered_cap-filter_ob_01.jpg"]
+            blue:["https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/w_2560,h_2560/v1655284385/401223116-larq-bottle-filtered_cap-filter_ob_01/401223116-larq-bottle-filtered_cap-filter_ob_01.jpg"]
           },
         rating:[],
         
@@ -172,7 +171,7 @@ function fun9(){
         disc:"The Bottle Filter uses Nano Zero with zerovalent iron technology which improves taste for a smooth finish and removes lead, heavy metals, chlorine, and particulates that meet NSF/ANSI 42, 53 & 401 standards.",
         disc1:"",
         img:{
-            white:["https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1643653021/bf-filter-1/bf-filter-1.jpg"]
+            blue:["https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1643653021/bf-filter-1/bf-filter-1.jpg"]
           },
         rating:[],
         
@@ -182,3 +181,9 @@ function fun9(){
     },
 
     ]
+    localStorage.setItem("allobjects", JSON.stringify(obj));
+    function products(){
+        console.log("fsdhfkjhsd")
+        document.getElementById("products").href="./products/products.html"
+        
+    }

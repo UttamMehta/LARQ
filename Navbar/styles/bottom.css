@@ -1,5 +1,5 @@
 
-        body{
+        #head{
             background-color:rgb(21, 58, 91);
             color: white;
             cursor: pointer;
@@ -33,7 +33,7 @@
             justify-content: space-between;
             padding: 25px;
         }
-        a{
+        head a{
             text-decoration: none;
             color: white;
         }

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <link rel="stylesheet" href="./Navbar/styles/index.css" />
+  <link rel="stylesheet" href="../Navbar/styles/index.css" />
   <style>
     * {
       margin: 0px;
@@ -19,6 +19,7 @@
       display: flex;
       justify-content: center;
       gap: 90px;
+      margin-top: 30px;
     }
     #np_top h3 {
       cursor: pointer;
@@ -115,6 +116,129 @@
     #giftsets{
       margin-top: 50px;
     }
+    #np_div6{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      text-align: center;
+    }
+    #np_div6 img{
+      width: 400px;
+    }
+    #filters{
+      margin-top: 50px;
+    }
+    #accessories{
+      margin-top: 50px;
+    }
+    #np_div7{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      text-align: center;
+    }
+    #np_div7 img{
+      width: 400px;
+    }
+    @media (max-width: 1000px) {
+      #np_div3{
+      
+        display: block;
+    }
+    #np_div3 img{
+      height: 100%;
+      cursor: pointer;
+    }
+    #np_div3 div{
+       margin-top: 00px;
+    }
+    #np_div2 div>p{
+             width: 100%;
+    }
+    #np_div3 div>p{
+             width: 100%;
+    }
+      #np_div4{
+      margin-top: 100px;
+      display: block;     
+    }
+      #np_div6 img{
+      width: 100%;
+    }
+      #np_div7 img{
+      width: 100%;
+    }
+    #np_div5 img{
+      width: 100%;
+    }
+  video{
+    width: 100%;
+    height: 100%;
+  }
+  img{
+    width: 100%;
+  }
+  #np_div7{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      text-align: center;
+    }
+    #np_div6{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      text-align: center;
+    }
+    #np_div5{
+      display: grid;
+      grid-template-columns: repeat(1,1fr);
+      text-align: center;
+    }
+
+    #np_top {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 30px;
+    }
+    h1{
+      font-size: 25px;
+    }
+    #np_top h3 {
+      font-size: 15px;
+      cursor: pointer;
+      color: #153a5b;
+    }
+    #np_top h3:hover {
+      font-size: 20px;
+    }
+    #np_div1{
+        width: 100%;
+        height: 500px;
+        margin-top: 50px;
+        text-align: center;
+        font-smooth: 20px;
+        font-size: 36px;
+    }
+    #np_div1 h1{
+        margin: auto;
+    }
+    /* #navbar{
+      position:sticky;
+      top: 0;
+      background-color: white;
+    } */
+    #np_div2{
+      display: block;
+    }
+    #np_div2 img{
+      height: 100%;
+      cursor: pointer;
+    }
+    
+    #np_div2 div{
+       
+    }
+   
+}
   </style>
   <body>
     <div id="navbar"></div>
@@ -172,7 +296,7 @@
                 </div>
                 <div id="np_div4_2">
                   
-                  <div><img id="img1" src="https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383113/LARQ_Pitcher_MB_1/LARQ_Pitcher_MB_1.jpg" alt=""></div>
+                  <div><img onclick="fun6()" id="img1" src="https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383113/LARQ_Pitcher_MB_1/LARQ_Pitcher_MB_1.jpg" alt=""></div>
                   <div id="np_div4_2_1">
                     <button id="n_button1"><img src="https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383113/LARQ_Pitcher_MB_1/LARQ_Pitcher_MB_1.jpg" alt=""></button>
                     <button id="n_button2"><img src="https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383123/LARQ_Pitcher_PW_1/LARQ_Pitcher_PW_1.jpg" alt=""></button>
@@ -193,11 +317,15 @@
               <h1>Filters</h1>
               <div id="np_div6"></div>
             </div>
+            <div id="accessories">
+              <h1>Accessories</h1>
+              <div id="np_div7"></div>
+            </div>
   </div>
+  <div id="bottom"></div>
     
 </body>
 </html>
-<script type="module" src="./products.js"></script>
-<script>
-  
-</script>
+<script  src="./products.js"></script>
+<link rel="stylesheet" href="../Navbar/styles/bottom.css">
+<script type="module" src="../import.js"></script>
