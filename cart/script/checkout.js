@@ -5,6 +5,9 @@ const arr = [
   "https://th.bing.com/th/id/OIP.t0r0NAChbqY1pM-nbBq3AwHaHZ?pid=ImgDet&rs=1",
 ];
 
+import navbar from "../componenets/navbar.js";
+document.getElementById("navbar").innerHTML = navbar();
+
 let i = 0,
   j = 1,
   k = 2,
@@ -51,19 +54,34 @@ document.getElementById("amount").innerHTML = `Total Amount:-  ${JSON.parse(
 )}`;
 
 document.querySelector("form").addEventListener("submit", () => {
-  document.querySelector(
-    "body"
-  ).innerHTML = ` <img  src="https://media.giphy.com/media/12PfUj30bGF2De/giphy.gif" alt="processing">`;
+  event.preventDefault();
+  let z = document.getElementById("card").value;
+  let z1 = document.getElementById("name").value;
+  let z2 = document.getElementById("exp").value;
+  let z3 = document.getElementById("cvc").value;
+  let z4 = document.getElementById("pass").value;
 
-  setTimeout(() => {
-    document.querySelector(
-      "body"
-    ).innerHTML = `  <img  src="https://images-na.ssl-images-amazon.com/images/I/61aj34BSydL._SL1000_.jpg" alt="Thank you">`;
-  }, 5000);
+  if (z !== "" && z1 !== "" && z2 !== "" && z3 !== "" && z4 !== "") {
+    if (z.length === 16 && z3.length === 3) {
+      document.querySelector(
+        "body"
+      ).innerHTML = `<img src="https://media.giphy.com/media/12PfUj30bGF2De/giphy.gif" alt="processing">`;
 
-  setTimeout(() => {
-    document.querySelector(
-      "body"
-    ).innerHTML = `  <img  src="https://www.boomboomkid.com/wp-content/uploads/2020/03/giphy-payment-success-BOOMBOOM-3.gif">`;
-  }, 2000);
+      setTimeout(() => {
+        document.querySelector(
+          "body"
+        ).innerHTML = `  <img  src="https://images-na.ssl-images-amazon.com/images/I/61aj34BSydL._SL1000_.jpg" alt="Thank you">`;
+      }, 5000);
+
+      setTimeout(() => {
+        document.querySelector(
+          "body"
+        ).innerHTML = `  <img  src="https://www.boomboomkid.com/wp-content/uploads/2020/03/giphy-payment-success-BOOMBOOM-3.gif">`;
+      }, 2000);
+    } else alert("wrong card details");
+  } else alert("Fill the form");
+});
+
+document.querySelector("#logo").addEventListener("click", () => {
+  window.location.href = "../../index.html";
 });

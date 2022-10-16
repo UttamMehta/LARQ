@@ -1,0 +1,175 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0px;
+}
+
+#main>div {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    align-items: center;
+
+}
+
+
+#img>img {
+    width: 100%;
+}
+
+#button {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+input {
+    width: 60px;
+    text-align: center;
+}
+
+#addremove>h3 {
+    margin: 0px;
+}
+
+#deleteandprice {
+    display: flex;
+    height: 90%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#addremove {
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: space-between;
+
+}
+
+button {
+    background-color: #fff;
+    border: .5px solid grey;
+    margin-left: -5px;
+    margin-right: -5px;
+}
+
+button>span {
+    cursor: pointer;
+}
+
+#flex {
+    display: flex;
+    flex-direction: column;
+}
+
+#totalprice {
+    width: 76%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: space-between;
+}
+
+#totalprice>div:nth-child(3),
+#totalprice>div:nth-child(4) {
+    padding: -10px;
+}
+
+#del {
+    border: none;
+
+}
+
+#del span {
+    background-color: rgb(255, 7, 7)
+}
+
+#sub {
+    background-color: rgb(255, 165, 0);
+    border-radius: 10px 0px 0px 10px;
+}
+
+#add {
+    background-color: rgb(0, 0, 255);
+    border-radius: 0px 10px 10px 0px;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0px;
+}
+
+#grid img {
+    width: 90%;
+}
+
+h3 {
+    color: aqua;
+
+}
+
+p {
+    color: green;
+}
+
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+#grid {
+    margin: 20px;
+}
+
+#applycoupan {
+    width: 400px;
+}
+
+#applycoupan>input {
+    width: 100px;
+    height: 20px;
+}
+
+
+#applycoupan>button {
+    margin: 10px;
+    height: 24px;
+}
+
+#coupan,
+#Apply {
+    color: black;
+    font-size: medium;
+    font-weight: bolder;
+    background-color: #fff;
+    background-color: blanchedalmond;
+}
+
+#checkout {
+    font-size: medium;
+    font-weight: bold;
+    background-color: aqua;
+}
+
+#checkout:hover {
+    background-color: blueviolet;
+}
+
+#applycoupan input[type] {
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#applycoupan #inputcoupan{
+    height: 28px;
+}
+
+#inpok{
+    width: 65px;
+    font-size: medium;
+}

@@ -1,3 +1,9 @@
+import navbar from "../componenets/navbar.js";
+document.getElementById("navbar").innerHTML = navbar();
+// import bottom from "../../Navbar/componenets/bottom.js";
+// document.getElementById("bottom").innerHTML = bottom();
+// console.log(bottom());
+
 let arr = JSON.parse(localStorage.getItem("cart")) || [];
 // let wise = JSON.parse(localStorage.getItem("wises")) || [];
 function cart(arr) {
@@ -39,6 +45,7 @@ function cart(arr) {
     inp.value = el.nu;
     inp.placeholder = "Quantity";
     inp.type = "number";
+    inp.id = "inpok";
     let z;
     inp.addEventListener("input", () => {
       if (z) clearTimeout(z);
@@ -172,7 +179,7 @@ document.querySelector("#coupan").addEventListener("click", () => {
   document.querySelector("#Apply").addEventListener("click", () => {
     let m = document.getElementById("prices").innerText;
 
-    let g = +m * 0.01;
+    let g = +m * 0.1;
     let n = +m - g;
     // document.getElementById("prices").innerText = m;
 
@@ -191,7 +198,7 @@ document.querySelector("#coupan").addEventListener("click", () => {
 </div>
 <div>
     <p>
-        ${g}
+        -${g}
     </p>
 </div>
 <div>
@@ -202,6 +209,8 @@ document.querySelector("#coupan").addEventListener("click", () => {
 <div>
     <p>${n}</p>
 </div>
+<br>
+<br>
 <a href="./checkout.html"><button id="checkout"> Checkout</button></a>
 `;
   });
@@ -252,3 +261,6 @@ function check() {
 }
 
 check();
+document.querySelector("#logo").addEventListener("click", () => {
+  window.location.href = "../../index.html";
+});
