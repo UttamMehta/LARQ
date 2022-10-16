@@ -7,297 +7,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="../../Navbar/styles/index.css">
+<link rel="stylesheet" href="../style/details.css">
+<!-- <link rel="stylesheet" href="../../Navbar/styles/bottom.css"> -->
 
-<style>
-    * {
-        box-sizing: inherit;
-        margin: 0px;
-        padding: 0px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        text-align: justify;
-    }
-
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0px;
-    }
-
-    body {
-        margin: 0px;
-        padding: 0px;
-        background-color: #ffffff;
-        letter-spacing: .7px;
-        padding-left: 4%;
-        padding-right: 5%;
-        padding-top: 5%;
-    }
-
-    #bottom_u,
-    #main_u {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px;
-        margin-bottom: 40px;
-    }
-
-    #bottom_u {
-        text-align: left;
-    }
-
-    #reviewinput_u>div {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        margin-bottom: 20px;
-    }
-
-
-    #reviewinput_u input {
-        width: 120px;
-        height: 30px;
-        border-color: black;
-    }
-
-    #rating_u {
-        margin-top: 0.66667rem;
-        font-size: 3rem;
-        line-height: 0.98;
-        color: #153a5b;
-    }
-
-    #img_u>img {
-        height: fit-content;
-        width: 600px;
-    }
-
-    .cblue_u {
-        color: #153a5b;
-    }
-
-    #cart>button {
-        background-color: #153a5b;
-        color: #ffffff;
-        height: 40px;
-        width: 100%;
-        text-align: center;
-        font-size: large;
-    }
-
-    #cart>button:hover {
-        background-color: #ffffff;
-        color: #153a5b;
-    }
-
-    #noofreview {
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-        align-items: center;
-        margin-bottom: 20px;
-        margin-bottom: 20px;
-    }
-
-    #size {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5px;
-    }
-
-    #size>button {
-        text-align: center;
-        height: 30px;
-        background-color: #ffffff;
-        color: blue;
-        margin-bottom: 10px;
-        border: 1px solid lightgray;
-    }
-
-    #size>button:hover {
-        border: 1px solid black;
-    }
-
-    #price {
-        margin-bottom: 10px;
-        font-size: large;
-        font-weight: bold;
-    }
-
-    #allcolors>button {
-        height: 20px;
-        width: 20px;
-        border-radius: 40px;
-        border-color: grey
-    }
-
-    .blue {
-        background-color: blue;
-    }
-
-    .white {
-        background-color: #ffffff;
-    }
-
-    #otherimage {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-        margin-top: -20px;
-    }
-
-    #otherimage>img {
-        width: 100%;
-        height: 200px;
-
-    }
-
-    #video>video {
-        width: 100%;
-    }
-
-    #allreviews_u {
-        border: 2px solid red;
-        border-radius: 16px;
-        padding: 12px 60px;
-        background-color: #ffffff;
-    }
-
-    #allreviews_u h1 {
-        color: blueviolet;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    #allreviews_u>div {
-        margin-bottom: 0px;
-    }
-
-    body>div:nth-child(2) {
-        background-color: azure;
-        padding: 20px 20px;
-    }
-
-    #reviewappend_u {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    #title,
-    h4,
-    .blue_u p {
-        color: lightgreen;
-    }
-
-    p {
-        color: lightgray;
-    }
-
-    #noofreview p,
-    #price p {
-        color: black;
-    }
-
-    #reviewappend_u>div>p {
-        color: black;
-    }
-
-    .hide {
-        display: none;
-    }
-</style>
 
 <body>
 
 
+    <div id="navbar"></div>
+    <div id="body">
 
 
+        <div id="main_u">
+            <div>
+                <div id="img_u">
 
-    <div id="main_u">
-        <div>
-            <div id="img_u">
-
+                </div>
             </div>
-        </div>
-        <div id="rightside_u">
+            <div id="rightside_u">
 
-            <div id="title" class="blue_u">
+                <div id="title" class="blue_u">
 
-            </div>
-            <br>
-            <div id="price">
+                </div>
                 <br>
+                <div id="price">
+                    <br>
+                </div>
+                <div id="noofreview" class="rev">
+                    <p>No reviews yet</p><br>
+                    <span class="material-symbols-outlined">stars
+                    </span>
+                </div>
+
+                <h4 class="hide">Size</h4>
+                <div id="size">
+                    <button id="size1"></button>
+                    <button id="size2"></button>
+                </div>
+                <br>
+                <div id="allcolors">
+                    <h3 id="colorname">Monaco Blue</h3>
+                    <button class="blue"></button>
+                    <button class="white"></button>
+
+                </div>
+                <br>
+                <div>
+
+                </div>
+                <div id="cart"><button class="cart">Add to cart</button></div>
+                <br>
+                <hr>
+                <br>
+                <div class="blue_u">
+                    <p>Product description <br></p>
+                </div>
+                <br>
+                <div id="desc1">
+
+                </div>
+                <br>
+                <br>
+                <div id="desc2">
+
+                </div>
+
             </div>
-            <div id="noofreview" class="rev">
-                <p>No reviews yet</p><br>
-                <span class="material-symbols-outlined">stars
-                </span>
+            <div id="otherimage">
+
             </div>
 
-            <h4 class="hide">Size</h4>
-            <div id="size">
-                <button id="size1"></button>
-                <button id="size2"></button>
+            <div id="video">
+                <video
+                    src="https://res.cloudinary.com/larq/video/upload/q_auto/v1618422114/assets/spa/v2/content/product/pitcher/LARQ-Pitcher_Step-1.mp4"
+                    autoplay playsinline loop></video>
             </div>
-            <br>
-            <div id="allcolors">
-                <h3 id="colorname">Monaco Blue</h3>
-                <button class="blue"></button>
-                <button class="white"></button>
 
-            </div>
-            <br>
+        </div>
+
+        <div id="bottom_u">
             <div>
+                <div>
+                    <h4>Overall rating for</h4>
+                    <h2>LARQ Bottle PureVis™</h2>
+                </div>
 
+                <div id="rating_u"></div>
             </div>
-            <div id="cart"><button class="cart">Add to cart</button></div>
-            <br>
-            <hr>
-            <br>
-            <div class="blue_u">
-                <p>Product description <br></p>
-            </div>
-            <br>
-            <div id="desc1">
+            <div id="reviewinput_u">
+                <div>
 
-            </div>
-            <br>
-            <br>
-            <div id="desc2">
+                    <input type="number" name="" id="input_u" placeholder="Rate out of 5">
+                    <textarea name="" id="reviewtitle_u" cols="30" rows="10" style="height: 40px;"
+                        placeholder="Title"></textarea>
+                    <textarea name="" id="description_u" cols="30" rows="10" placeholder="Description"></textarea>
+                    <div id="reviewappend_u">
 
-            </div>
-
-        </div>
-        <div id="otherimage">
-
-        </div>
-
-        <div id="video">
-            <video
-                src="https://res.cloudinary.com/larq/video/upload/q_auto/v1618422114/assets/spa/v2/content/product/pitcher/LARQ-Pitcher_Step-1.mp4"
-                autoplay playsinline loop></video>
-        </div>
-
-    </div>
-
-    <div id="bottom_u">
-        <div>
-            <div>
-                <h4>Overall rating for</h4>
-                <h2>LARQ Bottle PureVis™</h2>
-            </div>
-
-            <div id="rating_u"></div>
-        </div>
-        <div id="reviewinput_u">
-            <div>
-
-                <input type="number" name="" id="input_u" placeholder="Rate out of 5">
-                <textarea name="" id="reviewtitle_u" cols="30" rows="10" style="height: 40px;"
-                    placeholder="Title"></textarea>
-                <textarea name="" id="description_u" cols="30" rows="10" placeholder="Description"></textarea>
-                <div id="reviewappend_u">
-
+                    </div>
                 </div>
             </div>
         </div>

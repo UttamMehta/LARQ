@@ -1,40 +1,13 @@
-let obj = {
-  id: 1,
-  items: "bottle",
-  title: "LARQ Pitcher PureVis™",
-  disc: "The LARQ Pitcher uses a unique 2-step process to improve the quality of your water using PureVis™ and Nano Zero filter technology–giving you fresh-tasting water sip after sip.",
-  disc1:
-    "*Based on elimination 99.8% of E.coli in a 20-second cycle for all LARQ Bottles.",
-  img: {
-    blue: [
-      "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383113/LARQ_Pitcher_MB_1/LARQ_Pitcher_MB_1.jpg",
-      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_600,h_600,c_fill/v1616256067/assets/spa/v2/content/product/lifestyle/pitcher/1.jpg",
-      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_600,h_600,c_fill/v1616256065/assets/spa/v2/content/product/lifestyle/pitcher/2.jpg",
-      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_600,h_600,c_fill/v1616256065/assets/spa/v2/content/product/lifestyle/pitcher/5.jpg",
-      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_600,h_600,c_fill/v1616256065/assets/spa/v2/content/product/lifestyle/pitcher/7.jpg",
-    ],
-    white: [
-      "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383123/LARQ_Pitcher_PW_1/LARQ_Pitcher_PW_1.jpg",
-      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_1000/v1616253209/assets/spa/v2/content/product/how-to-use/pitcher/1.jpg",
-      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_1000/v1616253209/assets/spa/v2/content/product/how-to-use/pitcher/2.jpg",
-      "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto,w_1000/v1616253209/assets/spa/v2/content/product/how-to-use/pitcher/3.jpg",
-      "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383128/LARQ_Pitcher_PW_2/LARQ_Pitcher_PW_2.jpg",
-    ],
-  },
-  rating: [],
-  size: {
-    first: "500ml",
-    second: "700ml",
-  },
-  price: {
-    "500ml": 500,
-    "700ml": 750,
-  },
-};
+import navbar from "../../Navbar/componenets/navbar.js";
+document.getElementById("navbar").innerHTML = navbar();
 
+<<<<<<< HEAD
 localStorage.setItem("abc", JSON.stringify(obj));
 
 obj = JSON.parse(localStorage.getItem("data"))||{};
+=======
+let obj = JSON.parse(localStorage.getItem("data")) || {};
+>>>>>>> fa268b8aa915b9ba8cc0a93e4a981bf68e1a076e
 
 let p, s;
 if (obj.items !== "bottle") {
@@ -277,3 +250,8 @@ function cart() {
 document.querySelector(".blue").addEventListener("click", fun3);
 document.querySelector(".white").addEventListener("click", fun4);
 document.querySelector(".cart").addEventListener("click", cart);
+
+document.querySelector("#logo").addEventListener(() => {
+  window.location.href = "../../index.html";
+});
+function logo() {}
