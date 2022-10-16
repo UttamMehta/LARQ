@@ -34,7 +34,7 @@ let obj = {
 
 localStorage.setItem("abc", JSON.stringify(obj));
 
-obj = JSON.parse(localStorage.getItem("abc"));
+obj = JSON.parse(localStorage.getItem("data"))||{};
 
 let p, s;
 if (obj.items !== "bottle") {
