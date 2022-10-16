@@ -86,6 +86,7 @@ function cart(arr) {
       arr.splice(i, 1);
       cart(arr);
       localStorage.setItem("cart", JSON.stringify(arr));
+      check();
     });
     // let bw = document.createElement("button");
     // bw.innerText = "wish";
@@ -152,10 +153,101 @@ function Total() {
   let m = ` <div>
   <h4>Sub Total</h4>
 </div>
-<div>
-  <p>${p}</p>
+<div id="net">
+  <p id="prices">${p}</p>
 </div>
 `;
 
   document.getElementById("totalprice").innerHTML = m;
 }
+var i = 0;
+document.querySelector("#coupan").addEventListener("click", () => {
+  i = +i + 1;
+  console.log(i);
+
+  document.getElementById(
+    "applycoupan"
+  ).innerHTML = `<input type="text" name="" id="inputcoupan"><button id="Apply">Promo Code</button>`;
+
+  document.querySelector("#Apply").addEventListener("click", () => {
+    let m = document.getElementById("prices").innerText;
+
+    let g = +m * 0.01;
+    let n = +m - g;
+    // document.getElementById("prices").innerText = m;
+
+    document.getElementById("applycoupan").innerHTML = "";
+
+    document.getElementById("totalprice").innerHTML = ` <div>
+    <h4>Sub Total</h4>
+</div>
+<div id="net">
+    <p id="prices">${m}</p>
+</div>
+<div>
+    <h4>
+        Discount 10%
+    </h4>
+</div>
+<div>
+    <p>
+        ${g}
+    </p>
+</div>
+<div>
+    <h4>
+        Net Amount
+    </h4>
+</div>
+<div>
+    <p>${n}</p>
+</div>
+`;
+  });
+});
+
+// if (i > 1) {
+//   document.querySelector("#Apply").addEventListener("click", () => {
+//     event.preventDefault();
+//     console.log(i);
+//     document.getElementById(
+//       "applycoupan"
+//     ).innerHTML = ` <button id="coupan">Apply Coupan</button>`;
+
+//   });
+// }
+
+let interval = [
+  "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1642022866/assets/spa/navigation/v2/nav_larq_bottle.jpg",
+  "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1642022866/assets/spa/navigation/v2/nav_larq_bottle_filtered.jpg",
+  "https://res.cloudinary.com/larq/image/upload/q_auto,f_auto/v1642022866/assets/spa/navigation/v2/nav_larq_pitcher.jpg",
+  "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225402/p1-hp-17-2-white-q/p1-hp-17-2-white-q.jpg",
+  "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225405/p1-eg-17-2-white-q/p1-eg-17-2-white-q.jpg",
+];
+
+// const interval = [
+//   "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225404/p1-eb-17-2-white-q/p1-eb-17-2-white-q.jpg",
+//   "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225364/p1-ob-17-2-white-q/p1-ob-17-2-white-q.jpg",
+//   "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1638225402/p1-mb-17-2-white-q/p1-mb-17-2-white-q.jpg",
+//   "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383113/LARQ_Pitcher_MB_1/LARQ_Pitcher_MB_1.jpg",
+//   "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1619383123/LARQ_Pitcher_PW_1/LARQ_Pitcher_PW_1.jpg",
+//   "https://res.cloudinary.com/larq/image/fetch/q_auto,f_auto/https://res.cloudinary.com/larq/images/f_auto,q_auto/v1642182217/filtered-17-ob-3/filtered-17-ob-3.jpg",
+// ];
+
+let in1 = 0;
+setInterval(() => {
+  if (in1 === interval.length) in1 = 0;
+  document.getElementById("interval").innerHTML = `<img src="${interval[in1]}"
+  alt="" srcset="">`;
+  in1++;
+}, 2000);
+
+function check() {
+  let m = JSON.parse(localStorage.getItem("cart")) || [];
+  if (m.length === 0) {
+    console.log("abc");
+    document.getElementById("flex").innerHTML = ` <h3>Your cart is empty</h3>`;
+  }
+}
+
+check();
