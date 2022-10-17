@@ -241,5 +241,5 @@ function signin() {
 }
 function gotocart() {
   console.log("fsdhfkjhsd");
-  document.getElementById("gotocart").href = "../cart/pages/cart.html";
+  document.getElementById("gotocart").href = "./cart/pages/cart.html";
 }
