@@ -1,13 +1,7 @@
 import navbar from "../../Navbar/componenets/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
 
-<<<<<<< HEAD
-localStorage.setItem("abc", JSON.stringify(obj));
-
-obj = JSON.parse(localStorage.getItem("data"))||{};
-=======
 let obj = JSON.parse(localStorage.getItem("data")) || {};
->>>>>>> fa268b8aa915b9ba8cc0a93e4a981bf68e1a076e
 
 let p, s;
 if (obj.items !== "bottle") {
