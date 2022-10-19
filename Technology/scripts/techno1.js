@@ -9,9 +9,8 @@ function logo(){
         console.log("fsdhfkjhsd");
         document.getElementById("technology").href = "../Technology/techno.html";
       }
-      function signin() {
-        console.log("fsdhfkjhsd");
-        document.getElementById("signin").href = "../signin/signin.html";
+      function signin(){
+        document.getElementById("signin").href = "./sign-in/sign-in.html";
       }
       function gotocart() {
         console.log("fsdhfkjhsd");
