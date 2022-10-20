@@ -1,0 +1,164 @@
+h1 {
+    text-align: center;
+    color: #153a5b;
+    font-size: 40px;
+    letter-spacing: .25px;
+  }
+  .c01294--paddingH-small {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+
+.c01294--white {
+    background: #ffffff;
+}
+
+.c01294 {
+    width: 100%;
+}
+.c01298 {
+    width: 100%;
+    color: #5a5e60;
+    margin: 0;
+    border: 1px solid #cccccc;
+    display: block;
+    padding: 0.634rem 1rem;
+    outline: none !important;
+    font-size: 16px;
+    transition: border-color .1s ease-out;
+    line-height: normal;
+    font-family: Value;
+    border-radius: 0;
+    background-color: #ffffff;
+    -webkit-appearance: none;
+}
+
+
+
+.c0178 {
+    width: calc(100% + 24px);
+    margin: -12px;
+}
+
+.c0154 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+c0178 > .c0155 {
+    padding: 12px;
+}
+@media (min-width: 724px) {.c01127 {
+    flex-grow: 0; 
+     max-width: 50%; 
+    flex-basis: 50%;
+}
+}
+.c01296--hasSpacing {
+    margin-bottom: 2.03333rem;
+}
+
+.c01296 {
+    width: 100%;
+    display: block;
+}
+
+.c0178 > .c0155 {
+    padding: 12px;
+}
+@media (min-width: 724px)
+{
+.c01127 {
+    flex-grow: 0;
+    max-width: 50%;
+    flex-basis: 50%;
+}
+}
+
+
+
+.c0155 {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.u-paddingVn {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+.c0178 > .c0155 {
+    padding: 12px;
+}
+.c01296--hasSpacing {
+    margin-bottom: 2.03333rem;
+}
+@media (min-width: 724px){
+
+.c01302 button, .c01302 a {
+    width: auto;
+    vertical-align: top;
+}
+
+.c01302 button, .c01302 a {
+    width: 100%;
+}
+}
+
+.c01302 * {
+    width: 100%;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+.c01288--primary {
+    color: #ffffff;
+    border: 2px solid #153a5b;
+    background-color: #153a5b;
+}
+
+.c01288 {
+    cursor: pointer;
+    border: 2px solid transparent;
+    padding: 0.7rem 4rem;
+    position: relative;
+    font-size: 1rem;
+    text-align: center;
+    transition: border-color .1s ease-out;
+    line-height: 1rem;
+    font-family: Value Bold;
+    font-weight: bold;
+    border-radius: 0;
+    letter-spacing: .75px;
+    transition-delay: 0ms;
+    transition-duration: 300ms;
+    transition-property: border-color, color, background-color, text-decoration-color;
+    transition-timing-function: ease-in-out;
+}
+
+button {
+    border: none;
+    margin: 0;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    -moz-appearance: none;
+    background-color: transparent;
+    webkit-appearance: none;
+}
+
+#navbar{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 99.5%;
+    background-color: white; 
+    margin-bottom: 30px; 
+}
+
+body>h1{
+    margin-top: 40px;
+}

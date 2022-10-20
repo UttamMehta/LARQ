@@ -1,5 +1,9 @@
-import navbar from "../../Navbar/componenets/navbar.js";
+import navbar from "../componenets/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
+
+import bottom from "../componenets/bottom.js";
+
+document.getElementById("bottom").innerHTML = bottom();
 
 let obj = JSON.parse(localStorage.getItem("data")) || {};
 
@@ -39,6 +43,7 @@ const show = (i) => {
     document.getElementById("size1").setAttribute("class", "hide");
     document.getElementById("size2").setAttribute("class", "hide");
   }
+
   // let value = obj.size.first;
   const k = `<p>€${p}.00</p>`;
   document.getElementById("price").innerHTML = k;
@@ -207,10 +212,12 @@ function fun1() {
 }
 
 function fun4() {
-  console.log(1);
-  event.preventDefault();
+  // event.preventDefault();
   ob.img = obj.img.white[0];
   show(obj.img.white);
+  ob.size = obj.size.first;
+  ob.price = obj.price[s];
+  // console.log(ob.price + s);
   ob.color = "white";
   document.getElementById("colorname").innerText = "Granite White";
 }
@@ -239,13 +246,31 @@ function cart() {
   console.log(cart);
   localStorage.setItem("cart", JSON.stringify(cart));
   console.log("uttam");
+
+  document.querySelector(
+    "#cartno"
+  ).innerHTML = `<a href="./cart.html" ><span class="material-symbols-outlined">
+  shopping_cart
+  </span></a><strong>${cart.length}</strong>`;
 }
 
-document.querySelector(".blue").addEventListener("click", fun3);
-document.querySelector(".white").addEventListener("click", fun4);
+if (obj.items === "bottle") {
+  document.querySelector(".blue").addEventListener("click", fun3);
+  document.querySelector(".white").addEventListener("click", fun4);
+}
 document.querySelector(".cart").addEventListener("click", cart);
 
-document.querySelector("#logo").addEventListener(() => {
-  window.location.href = "../../index.html";
-});
-function logo() {}
+// document.querySelector("#logo").addEventListener(() => {
+//   window.location.href = "../../index.html";
+// });
+// function logo() {}
+
+let cartno = JSON.parse(localStorage.getItem("cart")) || [];
+
+if (cartno.length > 0) {
+  document.querySelector(
+    "#cartno"
+  ).innerHTML = `<a href="./cart.html" ><span class="material-symbols-outlined">
+  shopping_cart
+  </span></a><strong>${cartno.length}</strong>`;
+}

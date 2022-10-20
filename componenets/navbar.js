@@ -1,10 +1,10 @@
 const navbar = () => {
   return `    <div id="nav">
-    <div id="logo" onclick="logo()"><img src="https://res.cloudinary.com/larq/image/upload/v1570724754/assets/spa/icons/logo-larq.svg" alt=""></div>
-</div>
+  <a href="./index.html"> <div id="logo" ><img src="https://res.cloudinary.com/larq/image/upload/v1570724754/assets/spa/icons/logo-larq.svg" alt=""></div>
+</div></a>
 <div id="item">
-    <div> <a id="products" href="../products/productpages/products.html">Products</a> </div>
-    <div> <a href="../Technology/techno.html">Technology</a></div>
+    <div> <a id="products" href="./products/productpages/products.html">Products</a> </div>
+    <div> <a href="./Technology/techno.html">Technology</a></div>
     <div> <a href="signin.html">Sign In</a></div>
    
     <div>
@@ -17,10 +17,9 @@ const navbar = () => {
     
 </div>
 
-<div id="ship"><a href="../../cart/pages/cart.html"><span class="material-symbols-outlined">
+<div id="ship"><span class="material-symbols-outlined">
 shopping_cart
-</span></a></div>
-</div>`;
+</span></div>`;
 };
 export default navbar;
 /* <i class="fa-light fa-cart-shopping"></i> */

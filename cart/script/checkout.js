@@ -8,6 +8,9 @@ const arr = [
 import navbar from "../componenets/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
 
+import bottom from "../componenets/bottom.js";
+document.getElementById("bottom").innerHTML = bottom();
+
 let i = 0,
   j = 1,
   k = 2,
@@ -62,7 +65,12 @@ document.querySelector("form").addEventListener("submit", () => {
   let z4 = document.getElementById("pass").value;
 
   if (z !== "" && z1 !== "" && z2 !== "" && z3 !== "" && z4 !== "") {
-    if (z.length === 16 && z3.length === 3) {
+    if (
+      z.length === 16 &&
+      z3.length === 3 &&
+      z4.length >= 4 &&
+      z4.length <= 6
+    ) {
       document.querySelector(
         "body"
       ).innerHTML = `<img src="https://media.giphy.com/media/12PfUj30bGF2De/giphy.gif" alt="processing">`;
@@ -70,16 +78,22 @@ document.querySelector("form").addEventListener("submit", () => {
       setTimeout(() => {
         document.querySelector(
           "body"
-        ).innerHTML = `  <img  src="https://images-na.ssl-images-amazon.com/images/I/61aj34BSydL._SL1000_.jpg" alt="Thank you">`;
-      }, 5000);
+        ).innerHTML = ` <img  src="https://images-na.ssl-images-amazon.com/images/I/61aj34BSydL._SL1000_.jpg" alt="Thank you">`;
+      }, 8000);
 
       setTimeout(() => {
         document.querySelector(
           "body"
-        ).innerHTML = `  <img  src="https://www.boomboomkid.com/wp-content/uploads/2020/03/giphy-payment-success-BOOMBOOM-3.gif">`;
-      }, 2000);
+        ).innerHTML = `  <img  src="https://cdnblog.webkul.com/blog/wp-content/uploads/2018/02/success.gif">`;
+      }, 5000);
+
+      setTimeout(() => {
+        location.href = "../pages/cart.html";
+      }, 15000);
     } else alert("wrong card details");
   } else alert("Fill the form");
+
+  localStorage.setItem("cart", JSON.stringify(""));
 });
 
 document.querySelector("#logo").addEventListener("click", () => {

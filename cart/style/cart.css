@@ -23,10 +23,7 @@ input::-webkit-inner-spin-button {
     grid-template-columns: repeat(3, 1fr);
 }
 
-input {
-    width: 60px;
-    text-align: center;
-}
+
 
 #addremove>h3 {
     margin: 0px;
@@ -110,8 +107,10 @@ h3 {
 
 }
 
-p {
-    color: green;
+ p,h4 {
+    /* color: green; */
+    font-size: large;
+    font-weight: bold;
 }
 
 * {
@@ -172,4 +171,21 @@ h1 {
 #inpok{
     width: 65px;
     font-size: medium;
+}
+
+#navbar{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 99.5%;
+    background-color: white;  
+}
+
+#flex>#main input{
+    text-align: center;
+}
+
+#deleteandprice{
+    padding: 16px;
+    justify-content: space-between;
 }

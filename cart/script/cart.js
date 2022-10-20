@@ -1,5 +1,8 @@
 import navbar from "../componenets/navbar.js";
 document.getElementById("navbar").innerHTML = navbar();
+
+import bottom from "../componenets/bottom.js";
+document.getElementById("bottom").innerHTML = bottom();
 // import bottom from "../../Navbar/componenets/bottom.js";
 // document.getElementById("bottom").innerHTML = bottom();
 // console.log(bottom());
@@ -58,10 +61,11 @@ function cart(arr) {
         console.log(k1.value);
 
         el.nu = +k1.value;
+        if (+el.nu <= 0) el.nu = 1;
         arr[i].nu = el.nu;
         localStorage.setItem("cart", JSON.stringify(arr));
         cart(arr);
-      }, 500);
+      }, 600);
     });
 
     let ba = document.createElement("button");
@@ -180,7 +184,9 @@ document.querySelector("#coupan").addEventListener("click", () => {
     let m = document.getElementById("prices").innerText;
 
     let g = +m * 0.1;
+
     let n = +m - g;
+    g = Math.round(g * 100) / 100;
     // document.getElementById("prices").innerText = m;
 
     document.getElementById("applycoupan").innerHTML = "";
@@ -211,9 +217,29 @@ document.querySelector("#coupan").addEventListener("click", () => {
 </div>
 <br>
 <br>
-<a href="./checkout.html"><button id="checkout"> Checkout</button></a>
+<button id="checkout"> Checkout</button>
 `;
+
+    document.querySelector("#checkout").addEventListener("click", () => {
+      // localStorage.setItem("user_login", JSON.stringify(true));
+      event.preventDefault();
+      let u = JSON.parse(localStorage.getItem("user_login")) || false;
+      console.log(u);
+
+      if (u === true) window.location.href = "./checkout.html";
+      else window.location.href = "../sign-in/sign-in.html";
+    });
   });
+});
+
+document.querySelector("#checkout").addEventListener("click", () => {
+  // localStorage.setItem("user_login", JSON.stringify(true));
+  event.preventDefault();
+  let u = JSON.parse(localStorage.getItem("user_login")) || false;
+  console.log(u);
+
+  if (u === true) window.location.href = "./checkout.html";
+  else window.location.href = "../sign-in/sign-in.html";
 });
 
 // if (i > 1) {
@@ -264,3 +290,7 @@ check();
 document.querySelector("#logo").addEventListener("click", () => {
   window.location.href = "../../index.html";
 });
+
+function logl() {
+  window.location.href = "../../index.html";
+}

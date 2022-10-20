@@ -7,7 +7,7 @@ const bottom = () => {
             <li>My Accounts</li>
             <li>Exclusive Perks</li>
             <li>Corporate Gifting</li>
-            <li><a id="contact1" href="../Navbar/contact.html">Contact Us</a></li>
+            <li><a href="./Navbar/contact.html">Contact Us</a></li>
         </ul>
     </div>
     <div>

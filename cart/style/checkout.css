@@ -40,7 +40,7 @@ button {
 button,
 form>input {
     margin-top: 12px;
-    width: 98%;
+    width: 90%;
     height: 32px;
 
 }
@@ -53,7 +53,7 @@ form>input {
 button {
     align-items: center;
     font-weight: bold;
-    width: 98%;
+    width: 90%;
     border-radius: 8px;
     background-color: #e7e7e7;
     cursor: pointer;
@@ -67,4 +67,31 @@ body>img {
 #navbar{
     position:sticky;
     margin-bottom: 10px
+}
+
+#navbar{
+    position: fixed;
+    top:0;
+    right: 0;
+    width: 100%;
+    background-color: white;  
+    margin-bottom: 0px;
+}
+
+#flex_u{
+    margin-top: 50px;
+}
+
+button{
+    background-color: cornflowerblue;
+    margin-bottom: 20px;
+}
+
+form{
+    text-align: center;
+    box-shadow: gray;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+form>h2{
+    padding-top: 16px;
 }

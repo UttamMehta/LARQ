@@ -149,7 +149,6 @@ var obj = [
       ],
     },
     rating: [],
-
     price: 18,
   },
   {
@@ -229,5 +228,12 @@ var obj = [
 localStorage.setItem("allobjects", JSON.stringify(obj));
 function products() {
   console.log("fsdhfkjhsd");
-  document.getElementById("products").href = "./products/products.html";
+  document.getElementById("products").href =
+    "./products/productpages/products.html";
 }
+
+document.getElementById(
+  "ship"
+).innerHTML = `<a href="./cart/pages/cart.html" ><span class="material-symbols-outlined">
+shopping_cart
+</span></a>`;

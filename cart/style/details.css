@@ -76,6 +76,7 @@ input::-webkit-inner-spin-button {
 #cart>button:hover {
     background-color: #ffffff;
     color: #153a5b;
+    transition: .5s linear;
 }
 
 #noofreview {
@@ -200,6 +201,26 @@ input{
 textarea{
     font-size: large;
 }
-#body{
-    margin-top: -50px;
-}
+/* #navbar{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    position: sticky;
+    align-items: center;
+    cursor: pointer;
+    color: rgb(21, 58, 91);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    } */
+    #navbar{
+        position: fixed;
+        top:0;
+        right: 0;
+        width: 99.5%;
+        background-color: white;  
+    }
+   #navbar #cartno{
+    display: flex;
+    }
+    
