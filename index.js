@@ -231,6 +231,17 @@ function products() {
   document.getElementById("products").href =
     "./products/productpages/products.html";
 }
+function technology() {
+  console.log("fsdhfkjhsd");
+  document.getElementById("technology").href = "./Technology/techno.html";
+}
+function signin() {
+  document.getElementById("signin").href = "./sign-in/sign-in.html";
+}
+function gotocart() {
+  console.log("fsdhfkjhsd");
+  document.getElementById("gotocart").href = "./cart/pages/cart.html";
+}
 
 document.getElementById(
   "ship"
