@@ -1,5 +1,6 @@
 # Larq
-
+[Deployment link](https://adorable-tiramisu-d6b5e7.netlify.app)
+<br/>
 <br/>
 <img src="https://miro.medium.com/max/720/1*DTKL9gf410Fi1YnEvstJGQ.webp"/>
 <br/>
@@ -110,7 +111,7 @@ GitHub : https://github.com/XYashGaikwad  <br/>
 Linkedin :https://www.linkedin.com/in/yash-gaikwad-66a883228/  <br/>
 
 GITHUb Repository link of LiveLarq.com project: https://github.com/UttamMehta/LARQ  <br/>
-Deploy link-https://adorable-tiramisu-d6b5e7.netlify.app  <br/>
+
 
 
 
